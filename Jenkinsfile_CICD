@@ -80,7 +80,7 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
                         dir('client') {
-                            sh 'docker build -t suryaanshhhl/frontend:latest .'
+                            sh 'docker build -t suryaanshhh/frontend:latest .'
                             sh 'trivy image --format table -o frontend-image-report.html suryaanshhh/frontend:latest '
                             sh 'docker push suryaanshhh/frontend:latest'
                         }
